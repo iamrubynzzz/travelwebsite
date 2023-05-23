@@ -1,0 +1,714 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* font*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+header{
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F2F2D9;
+    padding: 20px;
+    z-index: 9999;   
+}
+
+/*logo*/
+header a{
+   text-decoration: none;
+   letter-spacing: 1px;
+   color: black;
+   font-weight: 900;
+   font-size: 40px;
+}
+
+/*navbar*/
+ul{
+    display: flex;
+    list-style-type: none;     /*to remove bullet points*/
+}
+
+ul li a{
+    padding: 0 10px;
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+/*add hover in navbar*/
+ul li a:hover{
+    color:  #C73B3E;
+    border-bottom: 3px solid  #C73B3E;
+}
+
+.selected{
+    color:  #C73B3E;
+    border-bottom: 3px solid  #C73B3E;
+}
+
+div#toggle-btn{
+    display: none;
+}
+
+
+
+/*responsive navbar for small screen*/
+label #btn{
+
+    color: black;
+    font-size: 25px;
+    float:right;
+    margin-right: 25px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:1134px){
+    
+
+    ul.navbar{
+        background-color: #F2F2D9;
+        position: fixed;
+        top: 0;
+        left:-100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+       
+    }
+
+    ul.navbar li{
+        margin-bottom: 30px;
+    }
+
+    ul.navbar-selected{
+        left: 0;
+    }
+
+    label#toggle-btn{
+        display: block;
+    }
+
+}
+
+@media(min-width:1135px){
+    ul.navbar{
+        display:flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+    }
+
+    ul.navbar li{
+        margin-right: 20px;
+    }
+
+    label#toggle-btn{
+        display: none;
+    }
+
+    
+}
+
+@media (max-width:1221px){
+    a.logo{
+        font-size: 18px;
+        font-weight: 400;
+        
+    }
+
+    ul.navbar{
+        font-size: 10px;
+        font-weight: 300;
+        
+    }
+    
+    .home .text h1{
+       font-size:15px ;
+       font-weight: 300;
+      
+       
+    }
+
+    .home .text h3{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0% 8%;
+      
+    }   
+}
+
+
+
+
+@media (max-width:1428px){
+    a.logo{
+        font-size: 21px;
+        font-weight: 600;
+        
+    }
+
+    ul li a{
+        font-size: 15px;
+    }
+    
+}
+
+/*adjustment of image and text*/
+@media(max-width:989px){
+    .home{
+        background-position: center;
+        width: 100%;
+        background-size: covers;
+    }
+
+    .home .text h1{
+        font-size:15px ;
+        font-weight: 500;
+        padding-top: 25%;
+        
+     }
+ 
+     .home .text h3{
+         font-size: 18px;
+         font-weight: 700;
+         padding: 0% 13%;
+       
+     }   
+}
+   
+    
+
+
+/*image of boudhanath*/
+.home{
+    position: relative;
+    background-image: url(https://i.redd.it/hanxdeuu4ma31.jpg);
+    height:100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    font-size: 20px;
+    padding: 11% 17%;
+    
+}
+
+.home h3{
+    padding: 0% 10%;
+    font-size: 50px;
+}
+
+
+
+
+/*css for about me section*/
+.about {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 0% 17%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.about .about-img{
+    width: 50%;
+    
+}
+
+.about .about-img img{
+    width: 100%;
+    height: auto;
+}
+
+.about .about-content{
+    width: 45%;
+   
+}
+
+.about h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about h4{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.about-content .data{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.about-content .text{
+    text-align: justify;
+}
+
+@media(max-width:833px){
+
+    div.about-img{
+        margin-right:10%;
+       
+    }
+    
+    div.about-content{
+      padding-top: 50%;
+    }
+
+    div.about-content h1{
+       font-size: 35px;
+
+    }
+
+    div.about-content h4{
+        font-size: 20px;
+    }
+
+    div.about-content .text{
+       
+        font-size:16px;
+    }
+
+    div.about-content .data{
+       
+        font-size: 16px;
+    }
+}
+
+@media(max-width:611px){
+    
+    div.about-content{
+      padding-top: 80%;
+    }
+
+    div.about-content h1{
+       font-size: 25px;
+
+    }
+
+    div.about-content h4{
+        font-size: 15px;
+    }
+
+    div.about-content .text{
+        text-align: left;
+        font-size: 15px;
+    }
+
+    div.about-content .data{
+        text-align: left;
+        font-size: 15px;
+    }
+}
+
+
+
+/*css for destination section*/
+.destination{
+    text-align: center;
+    margin-top: 180px;
+   
+}
+
+.destination h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.destination .main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+
+.destination h1{
+  padding:  0% 0% 4% 0%;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.destination .div{
+   display: none;
+   overflow: hidden;
+}
+
+.destination .main .div:nth-child(1),        /*horizontally allign two images in a row*/
+.destination .main .div:nth-child(2){
+    display: inline-flex;
+}
+
+.destination .div img{
+    width: 300px;
+    height: 250px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    transition: 0.3s;
+   
+}
+
+.destination .div:hover img{
+    transform: scale(1.1);
+    z-index: 1;
+    position: relative;
+    
+   
+}
+
+
+.destination .div .content{
+    flex: 1;
+    position: relative;
+    z-index: 2;   /*z-index:2 to display the headings above the hover image*/
+}
+
+.destination .div h2{
+    margin-bottom: 15px;
+   
+}
+.destination .div p{
+    text-align: justify;
+    padding-right: 10px;
+}
+
+
+.destination .button-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.destination .button-wrapper button{
+    background-color: whitesmoke;
+    border: 1px solid #334;
+    border-radius: 30px;
+    padding: 10px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+}
+
+.destination .button-wrapper button:hover{
+    background-color: #C73B3E;
+    border-color: #C73B3E;
+    color: white;
+}
+
+@media (max-width:1337px){
+    .destination .div h2{
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .destination .div p{
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+
+@media (max-width: 1177px) {
+    .destination .main {
+      grid-template-columns: 1fr;
+    }
+  
+    .destination .main .div:nth-child(n) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .destination .div img {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    .destination .button-wrapper{
+        display: none;
+    }
+
+    .destination .div p{
+        margin-bottom: 30px;
+    }
+  }
+  
+
+/*activities to do*/
+
+.activities{
+    text-align: center;
+    margin-top: 180px;
+   
+}
+
+.activities h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.activities .main {
+    display: flex;
+   
+}
+
+.activities .text {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+    margin-right: 20px;
+    
+}
+
+.activities .text1 {
+    background-image: url(https://www.baldhiker.com/wp-content/uploads/2020/04/Patan-Durbar-Sq-3-758x569.jpg);
+    margin-left: 20px;
+    
+}
+
+.activities .text2 {
+    background-image: url(https://th.bing.com/th/id/OIP.u0iYxT2rrqGRM9jzyOZjrQHaFj?pid=ImgDet&rs=1);
+}
+
+.activities .text3 {
+    background-image: url(https://i1104.photobucket.com/albums/h338/rotors99/P1110471.jpg);
+
+}
+
+.activities .text4 {
+    background-image: url(https://th.bing.com/th/id/R.0bfe8605948aa3c4fc3b96801a4395dc?rik=WZI%2bA3j3N7K2Bw&pid=ImgRaw&r=0);
+}
+
+.activities .text5 {
+    background-image: url(https://th.bing.com/th/id/R.02c1784e9072ec4bc98dac3b669bb628?rik=VqFQLa72oOpY%2bA&pid=ImgRaw&r=0);
+}
+
+.activities .text6 {
+    background-image: url(https://th.bing.com/th/id/OIP.6EHdtC067-9HZ1PHyQ8NSQHaFj?pid=ImgDet&rs=1);
+}
+
+.activities h1{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    
+  
+}
+
+@media (max-width: 1152px) {
+    .activities .main {
+      flex-direction: column;
+      height: 2000px;
+      align-items: center;
+      
+    }
+  
+    .activities .text {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+
+/* mode of transport*/
+.transportation .main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.transportation .div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+   
+}
+
+.transportation h1{
+    text-align: center;
+    padding: 150px 0px 50px 0px;
+    font-size: 30px;
+    font-weight: 700;
+   
+}
+
+.transportation .div img{
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.transportation .div h2{
+    margin: 10px 0;
+}
+
+.transportation .div p{
+    margin: 10px 0;
+    text-align: justify;
+}
+
+@media (max-width: 732px){
+    .transportation .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*accomodations section*/
+.accomodations{
+    text-align: center;
+    margin-top: 180px;
+   
+}
+
+.accomodations h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.accomodations .main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+.accomodations .div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accomodations .div img{
+    width: 400px;
+    height: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accomodations .div:hover img{
+    transform: scale(1.1);
+}
+
+.accomodations .div .content{
+    padding: 20px;
+} 
+   
+.accomodations .div.content h2{
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 1223px) {
+    .accomodations .main {
+      grid-template-columns: repeat(2, 1fr); /* to make the images appear in 2 columns and 3 rows */
+    }
+  
+    .accomodations .div img {
+      width: 100%; 
+      height: 300px; 
+    }
+
+    .accomodations  h2{
+        font-size: 15px;
+    }
+  }
+
+@media (max-width: 584px){
+    .accomodations .main {
+        grid-template-columns: repeat(1, 1fr); /* to make the images appear in 1 column( 1 fraction unit value)  and 3 rows in this case*/
+      }
+}
+
+
+
+/*references section*/
+.references{
+    margin-top: 12%;
+    margin-left: 5%;
+}
+
+.references h1{
+    margin-left: 40%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.references p{
+    margin-top: 2%;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+@media (max-width:761px){
+    .references h1{
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 25%;
+    }
+
+    .references p{
+        margin-top: 2%;
+        width: 100%;
+        word-wrap: break-word;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:386px){
+    .references h1{
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 35%;
+    }
+
+    .references p{
+        margin-top: 2%;
+        width: 100%;
+        word-wrap: break-word;
+        font-size: 12px;
+    }
+}
